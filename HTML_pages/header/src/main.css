@@ -189,7 +189,7 @@ nav {
   .logo {
     font-weight: bold;
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   body::after {
@@ -213,6 +213,14 @@ nav {
   }
 
   .menu-button {
+    position: absolute;
+    right: 20px;
+    top: 10px; 
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
     display: block;
   }
 
@@ -253,5 +261,8 @@ nav {
 
   .mockup-content {
     margin-left: 0;
+  }
+  html, body {
+    overflow-x: hidden;
   }
 }
