@@ -74,7 +74,7 @@ font-size: 1.1rem;
 
 button {
 margin-top: 20px;
-padding: 10px 20px;
+padding: 12px 20px;
 background: #000;
 color: white;
 border: none;
@@ -167,6 +167,7 @@ header {
   color: white;
   position: relative;
   z-index: 1;
+  margin-bottom: -20px;
 }
 
 .logo {
@@ -182,7 +183,7 @@ body::after {
 nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 7px;
   width: 100%;
   max-width: 480px;
 }
@@ -215,8 +216,28 @@ html, body {
   overflow-x: hidden;
 }
 
-.images{
-  display: none;
+.images {
+  display: block;
+  order: -1;
+  margin-bottom: 20px;
+  margin-top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  margin-top: -200px;
+  margin-bottom: -200px;
+}
+
+.img1, .img2 {
+  position: static;
+  width: 30%;
+  max-width: 150px;
+  border: 2px solid #ccc;
+  padding: 6px;
 }
 
 .content {
@@ -234,7 +255,7 @@ html, body {
 font-size: 1.2rem;
 font-weight: 800;
 line-height: 1.5;
-margin-bottom: 20px;
+margin-bottom: 30px;
 width: 100%;
 }
 

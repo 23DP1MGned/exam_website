@@ -19,3 +19,39 @@ menuButton.addEventListener('click', function() {
     menuNav.classList.add('menu-hidden'); 
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  let currentCommentIndex = 0;
+  const comments = document.querySelectorAll(".comment");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  
+  function showComment(index) {
+    comments.forEach((comment, i) => {
+      comment.classList.remove("active");
+      if (i === index) {
+        comment.classList.add("active");
+      }
+    });
+  }
+
+  showComment(currentCommentIndex);
+
+  nextBtn.addEventListener("click", () => {
+    if (currentCommentIndex < comments.length - 1) {
+      currentCommentIndex++;
+    } else {
+      currentCommentIndex = 0;
+    }
+    showComment(currentCommentIndex);
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (currentCommentIndex > 0) {
+      currentCommentIndex--;
+    } else {
+      currentCommentIndex = comments.length - 1;
+    }
+    showComment(currentCommentIndex);
+  });
+});

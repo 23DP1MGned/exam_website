@@ -252,11 +252,13 @@ nav {
   .hero {
     flex-direction: column;
     padding: 30px 20px;
+    align-items: stretch;
   }
 
   .hero-text {
     max-width: 100%;
     margin-top: 50px;
+    margin-bottom: 20px;
   }
 
   .hero h1 {
@@ -268,7 +270,12 @@ nav {
   }
 
   .hero-blocks {
-    display: none;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    padding: 20px;
+    transform: none !important;
   }
 
   .block {
