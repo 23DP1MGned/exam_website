@@ -92,14 +92,14 @@
     display: flex;
     justify-content: center;
     margin: 0px 0px;
-    gap: 15px;
+    gap: 90px;
     background: rgba(0, 0, 0, 0.4);
     padding: 10px;
     zoom: 125%;
   }
   .step {
     background: linear-gradient(135deg, rgba(142, 239, 255, 0.3), rgba(82, 154, 255, 0.3));
-    padding: 7px 15px;
+    padding: 17px 25px;
     border-radius: 12px;
     font-size: 18px;
     font-weight: bold;
@@ -233,5 +233,12 @@
 
   .text1{
     font-size: 15px;
+  }
+
+  .steps{
+    gap: 15px;
+  }
+  .step{
+    padding: 7px 15px;
   }
   }

@@ -9,12 +9,12 @@ menuButton.addEventListener('click', function() {
   }
 });
 
-const el = document.querySelector('.contact-win');
-el.classList.add('fade-in-up');
+document.addEventListener('DOMContentLoaded', () => {
+  const fadeElements = document.querySelectorAll('.fade-in');
 
-new IntersectionObserver(([e], obs) => {
-  if (e.isIntersecting) {
-    e.target.classList.add('show');
-    obs.disconnect();
-  }
-}, { threshold: 0.1 }).observe(el);
+  fadeElements.forEach((el, index) => {
+    setTimeout(() => {
+      el.classList.add('visible');
+    }, index * 200);
+  });
+});
