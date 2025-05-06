@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Python Wallet</title>
+  <link rel="stylesheet" href="src/main.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Wallet</div>
+    <button class="menu-button" id="menuButton">☰</button> 
+    <nav id="menuNav" class="menu-hidden">
+      <a href="../header/index.html">Home</a>
+      <a href="../hero/index.html">About us</a>
+      <a href="../dwnld/index.html">Download</a>
+      <a href="#">Information</a>
+      <a href="../manual/index.html">User Manual</a>
+      <a href="../footer/index.html">Contacts</a>
+    </nav>
+  </header>
+
+  <div class="steps">
+    <button class="step">1</button>
+    <button class="step">2</button>
+    <button class="step">3</button>
+    <button class="step">4</button>
+    <button class="step">5</button>
+  </div>
+  <div class="main-wrapper">
+  <main>
+    <div class="instruction step-content active" class="texxt1" data-step="1">
+      <span class="text1"><strong>Step 1: Registration</strong><br><br>
+      <strong>1. Registration:<br></strong>
+        - Launch the application and start registration.<br>
+        - Enter your username and password.<br>
+        - The data will be saved to the `user_data.json` file, and you will see a message confirming successful registration.<br>
+        <strong>2. Registration Confirmation:<br></strong>
+      - After registration, the application will automatically check for user data.<br>
+      - If user data is not found, you will be prompted to register again.<br>
+      </span>
+    </div>
+    <div class="instruction step-content" data-step="2">
+      <strong>Step 2: Wallet Management</strong><br><br>
+        <strong>1. Creating a Wallet:</strong><br>
+        - After logging into the system, select the option to create a new wallet.<br>
+        - Enter a name for your new wallet.<br>
+        - The wallet will be created with a unique address and saved to a file in the `wallets` directory.<br>
+        <strong>2. Deleting a Wallet:</strong><br>
+        - Select the option to delete an existing wallet.<br>
+        - Enter the name of the wallet you want to delete.<br>
+        - The wallet will be removed from the system.<br>
+        <strong>3. Viewing Wallets:</strong><br>
+        - Select the option to view all your wallets.<br>
+        - You will see a list of all available wallets with their balances.<br>
+        <strong>4. Switching Between Wallets:</strong><br>
+        - Select the option to choose the active wallet.<br>
+        - Enter the wallet number from the list of available wallets.<br>
+        - The active wallet will be selected for performing operations.<br>
+        <strong>5. Transferring Funds Between Wallets:</strong><br>
+        - Select the option to transfer funds between wallets.<br>
+        - Choose the sender and recipient from the list of available wallets.<br>
+        - Enter the amount and cryptocurrency for the transfer.<br>
+        - The funds will be transferred between the wallets.<br>
+    </div>
+    <div class="instruction step-content" data-step="3">
+      <strong>Step 3: Wallet Operations<br><br></strong>
+      <strong>1. Topping Up Balance in USDT:<br></strong>
+         - Select the "Top up balance in USDT" option.<br>
+         - Enter the amount in USDT and your card details.<br>
+         - Your wallet balance will be topped up.<br>
+         <strong>2. Converting USDT to Cryptocurrency:<br></strong>
+         - Select the "Convert USDT to Crypto" option.<br>
+         - Enter the amount in USDT and choose the cryptocurrency for conversion.<br>
+         - The funds will be converted and added to the balance of the selected cryptocurrency.<br>
+         <strong>3. Converting Cryptocurrency to USDT:<br></strong>
+         - Select the "Convert Crypto to USDT" option.<br>
+         - Enter the amount of cryptocurrency and choose USDT for conversion.<br>
+         - The funds will be converted and added to the USDT balance.<br>
+         <strong>4. Withdrawing Funds:<br></strong>
+         - Select the "Withdraw funds" option.<br>
+         - Enter the amount and cryptocurrency for withdrawal, as well as your card details.<br>
+         - The funds will be transferred to your card.<br>
+         <strong>5. Viewing Cryptocurrency Balances:<br></strong>
+         - Select the "View your crypto" option.<br>
+         - You will see a list of all available cryptocurrencies with their balances.<br>
+      
+    </div>
+    <div class="instruction step-content" data-step="4">
+      <strong>Step 4: Transaction Management</strong><br><br>
+        <strong>1. Creating a Transaction:</strong><br>
+         - Transactions are created automatically when topping up the balance, converting cryptocurrencies, and withdrawing funds.<br>
+         - All transactions are saved to the `user_transactions.json` file.<br>
+         <strong>2. Viewing Transactions:</strong><br>
+         - Select the option to view the transaction history.<br>
+         - You will see a list of all your transactions with the ability to sort by date, amount, type, and cryptocurrency pairs.<br>
+         <strong>3. Sorting Transactions:</strong><br>
+         - When viewing the transaction history, you can choose the option to sort transactions by various parameters:<br>
+           - Date: Sort by transaction date in ascending or descending order.<br>
+           - Amount: Sort by transaction amount in ascending or descending order.<br>
+           - Type: Sort by transaction type (e.g., top-up, conversion, withdrawal).<br>
+           - Cryptocurrency Pairs: Sort by cryptocurrency pairs (e.g., USDT -> BTC).<br>
+           <strong>4. Filtering Transactions:</strong><br>
+         - You can filter transactions by type or cryptocurrency pairs:<br>
+         - Transaction Type: Enter the transaction type for filtering (e.g., top-up, conversion).<br>
+         - Cryptocurrency Pairs: Enter the source and target cryptocurrencies for filtering transactions (e.g., USDT -> BTC).<br>
+      
+    </div>
+    <div class="instruction step-content" data-step="5">
+      <span class="text1"><strong>Step 5: Exiting the System</strong><br><br>
+        <strong>1. Saving Data:</strong><br>
+          - Before exiting the system, the application will automatically save all data of the active wallet.<br>
+          <strong>2. Exiting:</strong><br>
+          - Select the 'Exit' option.<br>
+          - The application will terminate, and you will see a message confirming the exit.<br>
+      <span>
+    </div>
+  </main>
+  </div>
+  <script src="src/main.js"></script>
+</body>
+</html>

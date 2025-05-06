@@ -41,6 +41,7 @@ header {
   color: white;
   position: relative;
   z-index: 1;
+  zoom: 125%;
 }
 
 .logo {
@@ -69,6 +70,7 @@ nav {
   padding: 60px;
   position: relative;
   z-index: 1;
+  zoom: 125%;
 }
 
 .hero-text {
@@ -205,6 +207,7 @@ nav {
     position: relative;
     z-index: 1;
     background: rgba(0, 0, 0, 0.4);
+    zoom: 100%;
   }
 
   .logo {
@@ -253,6 +256,7 @@ nav {
     flex-direction: column;
     padding: 30px 20px;
     align-items: stretch;
+    zoom: 100%;
   }
 
   .hero-text {

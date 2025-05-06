@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    min-height: 100vh;
+    height: auto;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #111;
+    min-height: 100vh;
+    height: auto;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @keyframes moveBackground {
+    0% {
+      background-position: 0% 50%, 50% 50%, 100% 50%, 0% 0%;
+    }
+    50% {
+      background-position: 100% 50%, 50% 100%, 0% 50%, 100% 100%;
+    }
+    100% {
+      background-position: 0% 50%, 50% 50%, 100% 50%, 0% 0%;
+    }
+  }
+
+  .main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+    padding: 40px 0;
+  }
+  
+
+  body::before {
+    content: "";  
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: 
+      radial-gradient(circle at 30% 40%, #8eefff 5%, transparent 50%),
+      radial-gradient(circle at 80% 30%, #529aff 20%, transparent 50%),
+      radial-gradient(circle at 10% 10%, #ffd54f 20%, transparent 50%),
+      linear-gradient(135deg, #a76cf2, #fcb045, #ff4081);
+    background-size: 200% 200%;
+    animation: moveBackground 20s ease infinite;
+    background-color: #111;
+    opacity: 1;
+  }  
+  
+  header {
+    background: radial-gradient(circle at 30% 40%, #8eefff 20%, transparent 40%),
+    radial-gradient(circle at 80% 30%, #529aff 20%, transparent 50%),
+    radial-gradient(circle at 10% 10%, #ffd54f 20%, transparent 50%),
+    linear-gradient(135deg, #a76cf2, #fcb045, #ff4081);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    zoom: 125%;
+  }
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  nav{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 80px;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    zoom: 125%;
+  }
+  .step {
+    background: linear-gradient(135deg, rgba(142, 239, 255, 0.3), rgba(82, 154, 255, 0.3));
+    padding: 7px 15px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .step:hover {
+    background: linear-gradient(135deg, rgba(252, 176, 69, 0.4), rgba(64, 233, 255, 0.4));
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
+  }
+  
+  .step-content {
+    opacity: 0;
+    max-height: auto;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+  }
+  
+  .step-content.active {
+    opacity: 1;
+    max-height: auto;
+    font-size: 20px;
+  }
+  
+  
+  
+  
+  
+  main {
+    width: 80%;
+    max-width: 1200px;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin: auto;
+    zoom: 125%;
+  }
+
+  .menu-button {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+    margin-top: 10px;
+  }
+
+  .step-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .step-content.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  .head{
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .text1{
+    font-size: 25px;
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: white;
+      position: relative;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.4);
+      zoom: 100%;
+    }
+  
+    .logo {
+      font-weight: bold;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+  
+    nav {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      width: 100%;
+      max-width: 480px;
+    }
+  
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    .menu-button {
+      position: absolute;
+      right: 20px;
+      top: 10px; 
+      font-size: 30px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      display: block;
+    }
+  
+    .menu-hidden {
+      display: none;
+    }
+
+    .step-content.active{
+      font-size: 15px;
+    }
+
+  .text1{
+    font-size: 15px;
+  }
+  }

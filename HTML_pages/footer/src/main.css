@@ -41,6 +41,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  zoom: 125%;
 }
   
 .logo {
@@ -69,6 +70,7 @@ nav a {
   justify-content: center;
   align-items: center;
   padding: 40px;
+  zoom: 125%;
 }
 
 .fade-in-up {
@@ -142,6 +144,7 @@ nav a {
   background: rgba(0, 0, 0, 0.4);
   color: white;
   font-size: 14px;
+  zoom: 125%;
 }
   
 .footer a {
@@ -175,6 +178,7 @@ nav a {
     position: relative;
     z-index: 1;
     background: rgba(0, 0, 0, 0.4);
+    zoom: 100%;
   }
   
   .logo {
@@ -221,5 +225,13 @@ nav a {
 
   .footer{
     font-size: 18px;
+  }
+
+  .contact-win{
+    zoom: 100%;
+  }
+
+  .footer{
+    zoom: 100%;
   }
 }
